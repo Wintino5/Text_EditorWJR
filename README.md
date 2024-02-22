@@ -6,7 +6,7 @@ In this challenge we completed code to create a text editor that runs in the bro
 
 ## Repository
 
-Link to Render App: 
+Link to Render App: https://text-editorwjr-1.onrender.com
 
 ## Technologies
 
