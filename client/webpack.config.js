@@ -21,6 +21,27 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE'
+      }),
+      new WebpackPwaManifest({
+        name: 'Text Editor',
+        short_name: 'JATE',
+        description: 'Just another text editor',
+        background_color: 'grey',
+        theme_color: 'blue',
+        publicPath: '/',
+        ios: true,
+        crossorigin: 'use-credentials',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons')
+          }
+        ]
+      }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js'
       })
     ],
 
